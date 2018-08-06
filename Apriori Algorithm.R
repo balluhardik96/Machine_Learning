@@ -1,0 +1,33 @@
+library(arules)
+library(arulesViz)
+library(recommenderlab)
+library(reshape2)
+data('Groceries')
+Groceries
+inspect(Groceries[1])
+model = apriori(data=Groceries,parameter=list(support=0.03,confidence=0.03))
+inspect(model)
+x=list(c('a','b','c','d'),c('a','d'),c('e','a','c'),c('e','b'))
+x_trans=as(x,'transactions')
+x_trans
+inspect(x_trans[1])
+model = apriori(x_trans,parameter = list(support=0,confidence=0))
+inspect(sort(model,by='lift',decreasing=T))
+model = apriori(Groceries,parameter = list(support=(30/9835),confidence=0.5))
+inspect(sort(model,by='lift')[1:10])                
+
+
+#Model Building With Movies data
+library(recommenderlab)
+library(reshape2)
+setwd("C:/Users/Administrator/Desktop/Dataset")
+getwd()
+movies= read.csv('movies.csv')
+ratings= read.csv('ratings.csv')
+length(unique(ratings$userId))
+length(unique(ratings$movieId))
+ratings_matrix = dcast(data=ratings,userId~movieId,value.var = 'rating')
+dim(ratings_matrix)
+rankings_matrix = as(as.matrix(ratings_matrix),'realRatingMatrix')
+ubcf = Recommender(rankings_matrix,method = 'UBCF',param = list('Cosine',nn=30))
+View(ratings_matrix[1:30,1:30])

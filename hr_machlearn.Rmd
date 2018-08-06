@@ -1,0 +1,85 @@
+---
+title: "HR ML"
+author: "Hardik Ballal"
+date: "14 May 2018"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(rpart)
+library(rattle)
+setwd("C:/Users/Administrator/Desktop/Dataset")
+getwd()
+hr=read.csv("HR Analytics.csv")
+```
+
+```{r}
+model = rpart(Attrition~Gender+OverTime,data=hr)
+fancyRpartPlot(model)
+```
+
+
+
+
+Gini Impurity
+```{r}
+length(hr$MonthlyIncome)
+length(hr[hr$OverTime=="Yes",]$Attrition)
+nrow(hr[hr$MonthlyIncome<1030,]$Attrition)
+nrow(hr[hr$MonthlyIncome>=1030,]$Attrition)
+```
+
+
+
+
+## Numerical Input
+```{r}
+N = nrow(hr)
+mi_uniqs = sort(unique(hr$MonthlyIncome))
+mi_cuts = (mi_uniqs[1:length(mi_uniqs)-1]+mi_uniqs[2:length(mi_uniqs)]) / 2
+
+
+length(mi_cuts)
+GIs = c()
+for (cut  in mi_cuts) {
+  samples_left = hr%>% filter(MonthlyIncome<cut)
+  samples_right = hr %>% filter(MonthlyIncome>cut)
+Nl = nrow(samples_left)
+Nr = nrow(samples_right)
+
+#Left Side GI
+GI_left = 1-(nrow(samples_left %>% filter(Attrition==0))/Nl) ^ 2 - (nrow(samples_left %>% filter(Attrition==1))/Nl) ^ 2
+
+#GI_Right
+GI_right = 1-(nrow(samples_right %>% filter(Attrition==0))/Nl) ^ 2 - (nrow(samples_right %>% filter(Attrition==1))/Nl) ^ 2
+
+#Overall GI
+GI = (Nl/N*GI_left) + (Nr/N*GI_right)
+GIs = c(GIs,GI)
+}
+
+result = data.frame(Predictor = rep('MonthlyIncome',length(mi_cuts)),cut=mi_cuts,GI=GIs)
+result %>% arrange(GI) %>% head(1)
+```
+
+
+
+Output Parameters
+```{r}
+hr_train = hr[sample(seq(1,nrow(hr)),(0.8*nrow(hr))),]
+hr_test = hr[sample(seq(1,nrow(hr)),(0.3*nrow(hr))),]
+hr$Attrition = as.factor(hr$Attrition)
+dim(hr_train)
+dim(hr_test)
+model = rpart(Attrition~Gender+MonthlyIncome+OverTime,data=hr_train,method='class')
+fancyRpartPlot(model)
+predict(model,hr_test)
+
+hr[1189,c('Gender','MonthlyIncome','OverTime','Attrition')]
+hr_test %>% filter(predict==Attrition) %>% nrow()
+nrow(hr_test)
+370 / nrow(hr_test)
+table(hr$Attrition)
+```

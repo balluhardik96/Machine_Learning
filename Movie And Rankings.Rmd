@@ -1,0 +1,41 @@
+---
+title: "Model Building"
+author: "Hardik Ballal"
+date: "22 May 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(recommenderlab)
+library(reshape2)
+library(dplyr)
+setwd("C:/Users/Administrator/Desktop/Dataset")
+getwd()
+movies= read.csv('movies.csv')
+ratings= read.csv('ratings.csv')
+length(unique(ratings$userId))
+length(unique(ratings$movieId))
+ratings_matrix = dcast(data=ratings,userId~movieId,value.var = 'rating')
+dim(ratings_matrix)
+rankings_matrix = as(as.matrix(ratings_matrix[,-1]),'realRatingMatrix')
+ubcf = Recommender(rankings_matrix,method = 'UBCF',param = list('Cosine',nn=30))
+View(ratings_matrix[1:30,1:30])
+result=predict(ubcf,rankings_matrix[1,],topN=5)
+as(result,'list')
+```
+
+```{r}
+length(unique(ratings$userId))
+length(unique(ratings$movieId))
+ratings_matrix = dcast(data=ratings,userId~movieId,value.var = 'rating')
+dim(ratings_matrix)
+rankings_matrix = as(as.matrix(ratings_matrix[,-1]),'realRatingMatrix')
+ubcf = Recommender(rankings_matrix,method = 'UBCF',param = list('Cosine',nn=30))
+View(ratings_matrix[1:30,1:30])
+dim(ratings_matrix)
+result=predict(ubcf,rankings_matrix[1,],n=5)
+movies_sugg = as(result,'list')[[1]]
+movies %>% filter(movieId %in% movies_sugg) %>% select(title)
+
+```
