@@ -1,0 +1,67 @@
+---
+title: "Cancer"
+author: "Hardik Ballal"
+date: "23 August 2018"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(class)
+library(gmodels)
+setwd("C:/Users/Administrator/Desktop/Kaggle")
+getwd()
+wbcd = read.csv("data.csv")
+
+```
+
+
+```{r}
+str(wbcd) #to confirm that the data is structured
+wbcd=wbcd[-1] #always remove the id parameter since it could cause overfitting
+table(wbcd$diagnosis) #to check the number of benign and malignant breast cancer patients
+
+```
+
+
+
+```{r}
+wbcd$diagnosis = factor(wbcd$diagnosis,levels = c("B","M"),labels=c("Benign","Malignant")) #Diagnosis being a target variable is coded as a factor and for that reason the parameter diagnosis needs to be recoded. We get more informative labels by using the factor
+
+round(prop.table(table(wbcd$diagnosis))*100,digits = 1) # Now they have been labeled properly with the percentage of masses having benign or malignant respectively.
+```
+
+
+```{r}
+normalize = function(x){
+  return((x-min(x)) /  (max(x)-min(x)))
+}
+wbcd_n = as.data.frame(lapply(wbcd[2:31], normalize)) #Normalization required to keep the values controlled. This command applies the normalize function to columns 2 through 31 in the wbcd data, converts the reurning list into a dataframe and assigns it to wbcd_n.
+```
+
+
+```{r}
+summary(wbcd[c("radius_mean","area_mean","smoothness_mean")])
+summary(wbcd_n$area_mean) #After normaloization was applied,using summary will show the normalized values and it stands corrected.
+```
+
+
+Creating Test and Training Datasets
+```{r}
+wbcd_train=wbcd_n[1:469,]
+wbcd_test=wbcd_n[470:569,]
+wbcd_train_labels=wbcd[1:469, 1]
+wbcd_test_labels=wbcd[470:569,1]#This code takes the diagnosis factor in the first column of the wbcd data frame and creates 2 vectors named above
+
+```
+
+
+Training and classification using the knn function
+```{r}
+wbcd_test_pred = knn(train=wbcd_train,test=wbcd_test,cl=wbcd_train_labels,k=21)
+```
+
+Evaluating Model Performance
+```{r}
+CrossTable(x=wbcd_test_labels,y=wbcd_test_pred,prop.chisq = FALSE)
+```
