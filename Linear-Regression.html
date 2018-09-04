@@ -1,0 +1,745 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=false;__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.ck.get=function(e,n){null!==n&&(e=e+"_"+n);for(var o=e+"=",t=decodeURIComponent(document.cookie).split(";"),i=0;i<t.length;i++){for(var c=t[i];" "===c.charAt(0);)c=c.substring(1);if(0===c.indexOf(o))return c.substring(o.length,c.length)}return""},__ez.ck.setByCat=function(e,n){if("undefined"!=typeof cmpIsOn){if(null!=n){var o=__ez.ck.get("ezCMPCookieConsent",null);-1!==(o=o.substring(1,o.length)).indexOf(n+"=1")?document.cookie=e:""===o&&"undefined"!=typeof cmpCookies&&(void 0===cmpCookies[n]&&(cmpCookies[n]=[]),cmpCookies[n].push(e))}}else document.cookie=e};__ez.queue=function(){var e=0,i=0,t=[],n=[],r=[],o=!0,s={func:function(e,i,n,r,o,s,a){var l=this;this.name=e,this.funcName=i,this.parameters=null===n?null:n instanceof Array?n:[n],this.isBlock=r,this.blockedBy=o,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.process=function(){c("... func = "+e),l.isInitialized=!0,l.isComplete=!0;var i=l.funcName.split(".");i.length>3||(3===i.length?window[i[0]][i[1]][i[2]].apply(null,this.parameters):2===i.length?window[i[0]][i[1]].apply(null,this.parameters):window[l.funcName].apply(null,this.parameters)),!0===l.deleteWhenComplete&&delete t[e],!0===l.isBlock&&(c("----- F'D: "+l.name),d())}},file:function(e,i,t,n,r,o,s){var a=this;this.name=e,this.path=i,this.async=r,this.defer=o,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.process=function(){a.isInitialized=!0,c("... file = "+e);var t=document.createElement("script");t.src=i,!0===r?t.async=!0:!0===o&&(t.defer=!0),t.onerror=function(){c("----- ERR'D: "+a.name),a.isError=!0,!0===a.isBlock&&d()},t.onreadystatechange=t.onload=function(){var e=t.readyState;c("----- F'D: "+a.name),e&&!/loaded|complete/.test(e)||(a.isComplete=!0,!0===a.isBlock&&d())},document.getElementsByTagName("head")[0].appendChild(t)}}};function a(e){!0!==l(e)&&0!=o&&e.process()}function l(e){if(e.blockedBy instanceof Array)for(var i=0;i<e.blockedBy.length;i++){var n=e.blockedBy[i];if(!1===t.hasOwnProperty(n))return c(e.name+" blocked = "+n),!0;if(!0===e.proceedIfError&&!0===t[n].isError)return!1;if(!1===t[n].isComplete)return c(e.name+" blocked = "+n),!0}return!1}function c(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function d(){++e>200||(c("let's go"),h(n),h(r))}function h(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||l(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?c(t.name+": error"):!0===t.isComplete?c(t.name+": complete already"):!0===t.isInitialized&&c(t.name+": initialized already"):t.process()}}return{addFile:function(e,i,o,l,c,d,h,f){var u=new s.file(e,i,o,l,c,d,h);!0===f?n[e]=u:r[e]=u,t[e]=u,a(u)},addFunc:function(e,o,l,c,d,h,f,u,p){!0===h&&(e=e+"_"+i++);var m=new s.func(e,o,l,c,d,f,u);!0===p?n[e]=m:r[e]=m,t[e]=m,a(m)},items:t,processAll:d,setallowLoad:function(e){o=e}}}();var __ezDotData=function(e,r){this.name=e,this.val=r};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var r,t,n,o,a,d,i,f="",c=0;for(e=Base64._utf8_encode(e);c<e.length;)o=(r=e.charCodeAt(c++))>>2,a=(3&r)<<4|(t=e.charCodeAt(c++))>>4,d=(15&t)<<2|(n=e.charCodeAt(c++))>>6,i=63&n,isNaN(t)?d=i=64:isNaN(n)&&(i=64),f=f+this._keyStr.charAt(o)+this._keyStr.charAt(a)+this._keyStr.charAt(d)+this._keyStr.charAt(i);return f},decode:function(e){var r,t,n,o,a,d,i="",f=0;for(e=e.replace(/[^A-Za-z0-9+/=]/g,"");f<e.length;)r=this._keyStr.indexOf(e.charAt(f++))<<2|(o=this._keyStr.indexOf(e.charAt(f++)))>>4,t=(15&o)<<4|(a=this._keyStr.indexOf(e.charAt(f++)))>>2,n=(3&a)<<6|(d=this._keyStr.indexOf(e.charAt(f++))),i+=String.fromCharCode(r),64!=a&&(i+=String.fromCharCode(t)),64!=d&&(i+=String.fromCharCode(n));return i=Base64._utf8_decode(i)},_utf8_encode:function(e){e=e.replace(/rn/g,"n");for(var r="",t=0;t<e.length;t++){var n=e.charCodeAt(t);n<128?r+=String.fromCharCode(n):n>127&&n<2048?(r+=String.fromCharCode(n>>6|192),r+=String.fromCharCode(63&n|128)):(r+=String.fromCharCode(n>>12|224),r+=String.fromCharCode(n>>6&63|128),r+=String.fromCharCode(63&n|128))}return r},_utf8_decode:function(e){for(var r="",t=0,n=c1=c2=0;t<e.length;)(n=e.charCodeAt(t))<128?(r+=String.fromCharCode(n),t++):n>191&&n<224?(c2=e.charCodeAt(t+1),r+=String.fromCharCode((31&n)<<6|63&c2),t+=2):(c2=e.charCodeAt(t+1),c3=e.charCodeAt(t+2),r+=String.fromCharCode((15&n)<<12|(63&c2)<<6|63&c3),t+=3);return r}},__ez.dot.dataToStr=function(e){if(void 0===e)return[];try{for(var r in e)e[r].val=e[r].val+""}catch(e){}return e},__ez.dot.getCC=function(){var e="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(e=_ezaq.country),e},__ez.dot.getDID=function(){var e="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(e=_ezaq.domain_id.toString()),e},__ez.dot.getEpoch=function(e){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(e=_ezaq.t_epoch),e},__ez.dot.getURL=function(e){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp||"undefined"!=typeof ezWp&&!0===ezWp)&&(e="//g.ezoic.net"+e),e},__ez.dot.isValid=function(e){for(var r=0;r<e.length;r++)if(e[r]instanceof __ezDotData==!1)return console.error("Invalid data. ",e[r]),!1;return!0},__ez.dot.isDefined=function(){for(var e=0;e<arguments.length;e++)if(void 0===arguments[e]||null===arguments[e])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&!0===ezJsu||"undefined"!=typeof _ez_sa&&!0===_ez_sa||void 0!==window.isAmp&&!0===isAmp||"undefined"!=typeof ezWp&&!0===ezWp)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(i,e){this.name=i,this.val=e};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(i,e){this.AddImpPixel(i,e,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(i,e){this.AddPVPixel(i,e),this.FirePixels()},AddImpPixel:function(i,e,t,n,o,a,r){if(this.isDefined(i,i.getSlotElementId)){var d=parseInt(i.getTargeting("ap")[0]),s=i.getSizes()[0],p=s.l.toString()+"x"+s.j.toString(),l="0",h="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(l=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(h=_ezaq.country);var f=this.getSlotIID(i),c=i.getSlotElementId();this.isDefined(f,c)&&this.validateData(e)&&(e=this.convertDataToStr(e),this.pixels.push({type:"impression",impression_id:f,domain_id:l,unit:c,t_epoch:this.tEpoch,revenue:t,est_revenue:n,ad_position:d,ad_size:p,bid_floor_filled:o,bid_floor_prev:a,stat_source_id:r,country_code:h,data:e}))}},AddImpPixelById:function(i,e){var t="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(t=_ezaq.domain_id.toString());var n=i.split("/");if(this.isDefined(i)&&3===n.length&&this.validateData(e)){var o=n[0],a=n[2];e=this.convertDataToStr(e),this.pixels.push({type:"impression",impression_id:a,domain_id:t,unit:o,t_epoch:this.tEpoch,data:e})}},AddPVPixel:function(i,e){var t="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(t=_ezaq.domain_id.toString()),this.isDefined(i)&&this.validateData(e)&&(e=this.convertDataToStr(e),this.pixels.push({type:"pageview",pageview_id:i,domain_id:t,t_epoch:this.tEpoch,data:e}))},FirePixels:function(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(!0===__ez.template.isOrig?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(i,e){return new EzoicPixelData(i,e)},convertDataToStr:function(i){if(void 0===i)return[];try{for(var e in i)i[e].val=i[e].val+""}catch(i){}return i},getSlotIID:function(i){var e=0;try{var t=i.getTargetingMap();if(-1===i.getSlotElementId().indexOf("div-gpt-ad"))return e;if(void 0!==t)for(var n in t)if(-1!==n.indexOf("iid")&&void 0!==t[n][0]){e=t[n][0];break}}catch(i){}return e},isDefined:function(){for(var i=0;i<arguments.length;i++)if(void 0===arguments[i]||null===arguments[i])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(i){for(var e=0;e<i.length;e++)if(i[e]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",i[e]),!1;return!0}};</script>
+<script type="text/javascript">
+	var __banger_pmp_deals=[{"SlotName":"/1254144/r_statistics_co-leader-1","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000},{"DealId":26,"Floor":6500}]},{"SlotName":"/1254144/r_statistics_co-large-billboard-2","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000},{"DealId":26,"Floor":6500}]},{"SlotName":"/1254144/r_statistics_co-large-leaderboard-2","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000},{"DealId":26,"Floor":6500}]},{"SlotName":"/1254144/r_statistics_co-box-4","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000},{"DealId":26,"Floor":6500}]},{"SlotName":"/1254144/r_statistics_co-box-3","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000}]},{"SlotName":"/1254144/r_statistics_co-banner-1","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300}]},{"SlotName":"/1254144/r_statistics_co-medrectangle-3","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300},{"DealId":21,"Floor":2000},{"DealId":22,"Floor":2500},{"DealId":23,"Floor":3000},{"DealId":24,"Floor":4000},{"DealId":25,"Floor":5000}]},{"SlotName":"/1254144/r_statistics_co-medrectangle-1","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":20,"Floor":300}]}];
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+function ez_isclean( data ) {
+    if (typeof data === 'undefined') { data = document.URL; }
+    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))(@|%2540|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    var isClean = !re.test(data);
+    return isClean;
+}
+
+var ez_queue = new Array();
+function sort_queue(a, b)
+{
+  if( a.priority < b.priority ) return -1;
+  else if( a.priority == b.priority ) return 0;
+  else return 1;
+}
+function execute_ez_queue()
+{
+  ez_queue.sort( sort_queue );
+
+  for( var i in ez_queue )
+  {
+        if(typeof ez_queue[i].method != "undefined")
+        {
+            try{
+                ez_queue[i].method.call( null );
+            }
+            catch (err) {
+
+            }
+        }
+  }
+}
+
+window.ez_ad_units = new Array();
+window.ezslots = new Array();
+function ez_write_tag(d) {
+    if(ez_isclean() && d instanceof Array) {
+
+		ez_ad_units[ez_ad_units.length] = d;
+        var ezcmd = "googletag.cmd.push(function() {var divid = 'div-gpt-ad-"+d[1]+"-0';if(typeof ezlrarn == 'function'){ezlrarn(divid);}googletag.display(divid);var to = 0;if("+d[2]+".getTargeting('ga')[0] == '0'){to = 500;console.log('"+d[2]+" - no google');}if(window.ezDisableInitialLoad==true){setTimeout(function(){googletag.pubads().refresh(["+d[2]+"])},to);}});";
+		return ezcmd;
+    }
+    else {
+        return "1+1";
+    }
+}
+function in_array(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>var ezrpos = new Array();var ez_current_interval;var ez_current_load = 0;</script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer src="//go.ezoic.net/porpoiseant/dall2.js" async></script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer>
+
+function epbjsRefreshSlot(e){epbjs.que.push(function(){epbjs.requestBids({adUnitCodes:[e.getSlotElementId()],bidsBackHandler:function(){epbjs.setTargetingForGPTAsync([e.getSlotElementId()])}})})}var epbjs=epbjs||{};epbjs.bidderTimeout=2500,epbjs.useAdj=true,epbjs.que=epbjs.que||[],epbjs.ezdss=epbjs.ezdss||[],epbjs.ezobid=epbjs.ezobid||[],epbjs.que.push(function(){var e=[{code: 'div-gpt-ad-r_statistics_co-leader-1-0', sizes: [[728,90]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248508' }}] },{code: 'div-gpt-ad-r_statistics_co-large-billboard-2-0', sizes: [[300,250]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248509' }}] },{code: 'div-gpt-ad-r_statistics_co-large-leaderboard-2-0', sizes: [[728,90]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248508' }}] },{code: 'div-gpt-ad-r_statistics_co-box-4-0', sizes: [[336,280],[300,250]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248509' }}] },{code: 'div-gpt-ad-r_statistics_co-box-3-0', sizes: [[728,90]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248508' }}] },{code: 'div-gpt-ad-r_statistics_co-banner-1-0', sizes: [[580,400],[336,280],[300,250]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248509' }}] },{code: 'div-gpt-ad-r_statistics_co-medrectangle-3-0', sizes: [[728,90]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248508' }}] },{code: 'div-gpt-ad-r_statistics_co-medrectangle-1-0', sizes: [[336,280],[300,250]], mediaType: 'banner', bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '1248509' }}] }];epbjs.addAdUnits(e);epbjs.SS={"criteo":10050,"sonobi":10048},epbjs.bidderSettings={sonobi: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.700000; var adj2 = adj1 * 1.200000; return adj2; }},criteo: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.720000; var adj2 = adj1 * 1.200000; return adj2; }},standard:{adserverTargeting:[{key:"hb_bidder",val:function(e){return e.bidderCode}},{key:"hb_adid",val:function(e){return e.adId}},{key:"hb_pb",val:function(e){var s=e.cpm;return 5>s?(Math.floor(100*s)/100).toFixed(2):(Math.floor(10*s)/10).toFixed(2)}},{key:"hb_ssid",val:function(e){return"ehb"==e.bidder?0:"undefined"!=typeof epbjs.SS[e.bidder.toLowerCase()]?epbjs.SS[e.bidder.toLowerCase()]:(console.error("epbjs: NO MATCH"),0)}}]}},epbjs.onEvent("bidWon",function(e){"ehb"==e.bidder?epbjs.ezdss[e.adUnitCode]=e.ss:"undefined"!=typeof epbjs.SS[e.bidder.toLowerCase()]?(epbjs.ezdss[e.adUnitCode]=epbjs.SS[e.bidder.toLowerCase()],1==epbjs.useAdj&&["sovrn","openx","pulsepoint","defymedia","aol","conversant","districtm","admedia","brealtime","sonobi","criteo","ix","cox","audienceNetwork","pubmatic","rubicon","gumgum","oftmedia"].indexOf(e.bidder)>-1&&(epbjs.ezobid[e.adUnitCode]=e.cpm/1.200000)):console.error("epbjs: NO MATCH")}),epbjs.requestBids({bidsBackHandler:function(e){epbjs.fastLoadAuctionEnd = true; epbjs.setTargetingForGPTAsync()}})});
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;window.ezoViewCheck = false;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+window.googletag = window.googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+
+
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+googletag.cmd.push(function() {googletag.destroySlots();if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslot_0 = googletag.defineSlot('/1254144/r_statistics_co-leader-1',[728,90],'div-gpt-ad-r_statistics_co-leader-1-0').addService(googletag.pubads()).setTargeting('iid19','1834827').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1111').setTargeting('sap','1111').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1037').setTargeting('compid','0').setTargeting('tap','r_statistics_co-leader-1-1834827').setTargeting('bv','3').setCollapseEmptyDiv(false).setTargeting('br1','7500').setTargeting('br2','3800').setTargeting('ezoic','1').setTargeting('stl','25');ezslot_0.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[0]="0";ezslot_1 = googletag.defineSlot('/1254144/r_statistics_co-large-billboard-2',[300,250],'div-gpt-ad-r_statistics_co-large-billboard-2-0').addService(googletag.pubads()).setTargeting('iid19','1888227').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1102').setTargeting('sap','1102').setTargeting('a','|253|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1034').setTargeting('compid','0').setTargeting('tap','r_statistics_co-large-billboard-2-1888227').setTargeting('bv','20').setCollapseEmptyDiv(false).setTargeting('br1','7000').setTargeting('br2','3600').setTargeting('ezoic','1').setTargeting('stl','23');ezslot_1.set('adsense_background_color','EEFF00').set('adsense_border_color','EEFF00').set('adsense_link_color','000000').set('adsense_text_color','000000').set('adsense_url_color','000000');ezrpos[1]="1";ezslot_2 = googletag.defineSlot('/1254144/r_statistics_co-large-leaderboard-2',[728,90],'div-gpt-ad-r_statistics_co-large-leaderboard-2-0').addService(googletag.pubads()).setTargeting('iid19','1838727').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1110').setTargeting('sap','1110').setTargeting('a','|1|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1036').setTargeting('compid','0').setTargeting('tap','r_statistics_co-large-leaderboard-2-1838727').setTargeting('bv','20').setCollapseEmptyDiv(false).setTargeting('br1','7000').setTargeting('br2','3400').setTargeting('ezoic','1').setTargeting('stl','25');ezslot_2.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','1a0dab').set('adsense_text_color','545454').set('adsense_url_color','006621');ezrpos[2]="2";ezslot_3 = googletag.defineSlot('/1254144/r_statistics_co-box-4',[336,280],'div-gpt-ad-r_statistics_co-box-4-0').addService(googletag.pubads()).setTargeting('iid19','1870077').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1104').setTargeting('sap','1104').setTargeting('a','|5|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','6').setTargeting('al','1003').setTargeting('compid','0').setTargeting('tap','r_statistics_co-box-4-1870077').setTargeting('bv','3').setCollapseEmptyDiv(false).setTargeting('br1','9500').setTargeting('br2','4600').setTargeting('ezoic','1');ezslot_3.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','20929A').set('adsense_text_color','000000').set('adsense_url_color','F0F0F0');ezrpos[3]="3";ezslot_4 = googletag.defineSlot('/1254144/r_statistics_co-box-3',[728,90],'div-gpt-ad-r_statistics_co-box-3-0').addService(googletag.pubads()).setTargeting('iid19','1871127').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1109').setTargeting('sap','1109').setTargeting('a','|253|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','2').setTargeting('al','1002').setTargeting('compid','0').setTargeting('tap','r_statistics_co-box-3-1871127').setTargeting('bv','14').setCollapseEmptyDiv(false).setTargeting('br1','5500').setTargeting('br2','2600').setTargeting('ezoic','1').setTargeting('deal1','26');ezslot_4.set('adsense_background_color','EEFF00').set('adsense_border_color','EEFF00').set('adsense_link_color','000000').set('adsense_text_color','000000').set('adsense_url_color','000000');ezrpos[4]="4";ezslot_5 = googletag.defineSlot('/1254144/r_statistics_co-banner-1',[580,400],'div-gpt-ad-r_statistics_co-banner-1-0').addService(googletag.pubads()).setTargeting('iid19','1854477').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1106').setTargeting('sap','1106').setTargeting('a','|1|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','5').setTargeting('al','1030').setTargeting('compid','0').setTargeting('tap','r_statistics_co-banner-1-1854477').setTargeting('bv','3').setCollapseEmptyDiv(false).setTargeting('br1','1400').setTargeting('br2','700').setTargeting('ezoic','1').setTargeting('deal1',[21,22,23,24,25,26]);ezslot_5.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','1a0dab').set('adsense_text_color','545454').set('adsense_url_color','006621');ezrpos[5]="5";ezslot_6 = googletag.defineSlot('/1254144/r_statistics_co-medrectangle-3',[728,90],'div-gpt-ad-r_statistics_co-medrectangle-3-0').addService(googletag.pubads()).setTargeting('iid19','1896027').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1112').setTargeting('sap','1112').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','8').setTargeting('al','1021').setTargeting('compid','0').setTargeting('tap','r_statistics_co-medrectangle-3-1896027').setTargeting('bv','3').setCollapseEmptyDiv(false).setTargeting('br1','5000').setTargeting('br2','2500').setTargeting('ezoic','1').setTargeting('stl','25').setTargeting('deal1','26');ezslot_6.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[6]="6";ezslot_7 = googletag.defineSlot('/1254144/r_statistics_co-medrectangle-1',[336,280],'div-gpt-ad-r_statistics_co-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid19','1873977').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|124|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','0').setTargeting('tap','r_statistics_co-medrectangle-1-1873977').setTargeting('bv','3').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','1600').setTargeting('br2','800').setTargeting('ezoic','1').setTargeting('stl','24').setTargeting('deal1',[21,22,23,24,25,26]);ezslot_7.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','FF0000').set('adsense_text_color','000000').set('adsense_url_color','FF0000');ezrpos[7]="7";}else{window.ezHideLocations=[];window.ezHideLocations.push('div-gpt-ad-r_statistics_co-leader-1-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-large-billboard-2-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-large-leaderboard-2-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-box-4-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-box-3-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-banner-1-0');window.ezHideLocations.push('div-gpt-ad-r_statistics_co-medrectangle-3-0');ezslot_7 = googletag.defineSlot('/1254144/r_statistics_co-medrectangle-1',[336,280],'div-gpt-ad-r_statistics_co-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid19','1873977').setTargeting('t','134').setTargeting('d','74860').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1105').setTargeting('sap','1105').setTargeting('a','|124|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod1').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('gala','').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','0').setTargeting('tap','r_statistics_co-medrectangle-1-1873977').setTargeting('bv','3').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','1600').setTargeting('br2','800').setTargeting('ezoic','1').setTargeting('stl','24').setTargeting('deal1',[21,22,23,24,25,26]);ezslot_7.set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_link_color','FF0000').set('adsense_text_color','000000').set('adsense_url_color','FF0000');ezrpos[7]="7";}googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotVisibilityChanged', function(event) { __ez.queue.addFunc("ezvbc", "ezvbc", event, false, ['banger.js'], true, true, false, true); });googletag.enableServices();});if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslots.push("ezslot_0");ezslots.push("ezslot_1");ezslots.push("ezslot_2");ezslots.push("ezslot_3");ezslots.push("ezslot_4");ezslots.push("ezslot_5");ezslots.push("ezslot_6");ezslots.push("ezslot_7");}else{ezslots.push("ezslot_7");}</script>
+<script>(function(){function a(g,h,i){var j=new Date;j.setTime(j.getTime()+1e3*(60*(60*(24*i))));var k="expires="+j.toUTCString(),l=g+"="+h+";"+k+";path=/;";"undefined"!=typeof ezdomain&&(l+="domain="+ezdomain),document.cookie=l}var b=window.addEventListener?"addEventListener":"attachEvent",c=window[b],f="attachEvent"==b?"onmessage":"message";c(f,function(g){"undefined"!=typeof g.data.ezstatus&&(__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("dg",g.data.ezstatus)]),a("ezdg",g.data.ezstatus,730))})})();</script>
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":2,"ad_location_ids":"37,34,36,3,2,30,21,4,81","adx_ad_count":8,"bidder_version":3,"city":"Bengaluru","country":"IN","days_since_last_visit":-1,"display_ad_count":8,"domain_id":74860,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":1,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":10,"metro_code":0,"page_ad_positions":"1102,1104,1105,1106,1109,1110,1111,1112,1113","page_view_count":0,"page_view_id":"2ffd8208-8406-4b25-5251-7c1f90c4cc07","position_selection_id":0,"postal_code":"560100","pv_event_count":0,"response_time_orig":1618,"serverid":"13.127.10.135:26232","state":"KA","sub_page_ad_positions":"1102,1104,1105,1106,1109,1110,1111,1112,1113","t_epoch":1535685849,"template_id":134,"time_on_site_visit":0,"url":"http://r-statistics.co/Linear-Regression.html","user_id":0,"word_count":3525};var _ezim_d = {"r_statistics_co-banner-1":{"adx_ad_count":8,"full_id":"r_statistics_co-banner-1/2018-08-30/1854477","height":"400","position_id":1106,"sub_position_id":1106,"width":"580"},"r_statistics_co-box-3":{"adx_ad_count":8,"full_id":"r_statistics_co-box-3/2018-08-30/1871127","height":"90","position_id":1109,"sub_position_id":1109,"width":"728"},"r_statistics_co-box-4":{"adx_ad_count":8,"full_id":"r_statistics_co-box-4/2018-08-30/1870077","height":"280","position_id":1104,"sub_position_id":1104,"width":"336"},"r_statistics_co-large-billboard-2":{"adx_ad_count":8,"full_id":"r_statistics_co-large-billboard-2/2018-08-30/1888227","height":"250","position_id":1102,"sub_position_id":1102,"width":"300"},"r_statistics_co-large-leaderboard-2":{"adx_ad_count":8,"full_id":"r_statistics_co-large-leaderboard-2/2018-08-30/1838727","height":"90","position_id":1110,"sub_position_id":1110,"width":"728"},"r_statistics_co-leader-1":{"adx_ad_count":8,"full_id":"r_statistics_co-leader-1/2018-08-30/1834827","height":"90","position_id":1111,"sub_position_id":1111,"width":"728"},"r_statistics_co-link-h-large-1":{"adx_ad_count":8,"full_id":"r_statistics_co-link-h-large-1/2018-08-30/1846377","height":"15","position_id":1113,"sub_position_id":1113,"width":"728"},"r_statistics_co-medrectangle-1":{"adx_ad_count":8,"full_id":"r_statistics_co-medrectangle-1/2018-08-30/1873977","height":"280","position_id":1105,"sub_position_id":1105,"width":"336"},"r_statistics_co-medrectangle-3":{"adx_ad_count":8,"full_id":"r_statistics_co-medrectangle-3/2018-08-30/1896027","height":"90","position_id":1112,"sub_position_id":1112,"width":"728"}};var _ezat = {"domain_id":74860,"form_factor_id":1,"framework_id":1,"pageview_date":"2018-08-30","pageview_id":"2ffd8208-8406-4b25-5251-7c1f90c4cc07","template_id":134,"url":"http://r-statistics.co/Linear-Regression.html","visit_uuid":"17ba1643-06d2-4550-63ee-aa7fe16c28b6"};</script><script data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('rochester.js', '/detroitchicago/rochester.js?cb=177-0&v=8', false, [], true, false, true, true);</script><script data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=177-0&bv=2&v=74&PageSpeed=off', true, [], true, false, false, true);</script><script data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_74860=" + new Date().getTime() + "|2ffd8208-8406-4b25-5251-7c1f90c4cc07; " + expires, 3);
+}
+function attach_ezolpl() {
+    if(window.attachEvent) {
+        window.attachEvent('onload', create_ezolpl);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl();
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl;
+        }
+    }
+}
+attach_ezolpl();
+</script>
+    <title>Linear Regression With R</title>
+    
+    <meta name="Description" content="R Language Tutorials for Advanced Statistics">
+    <meta name="Keywords" content="R, Tutorial, Machine learning, Statistics, Data Mining, Analytics, Data science, Linear Regression, Logistic Regression, Time series, Forecasting">
+    <meta name="Distribution" content="Global">
+    <meta name="Author" content="Selva Prabhakaran">
+    <meta name="Robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/screenshots/iconb-64.png" type="image/x-icon">
+    <link href="www/bootstrap.min.css" rel="stylesheet">
+    <link href="www/highlight.css" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css">
+    <!-- Color Script -->
+    <style type="text/css">
+      a {
+       color: #3675C5;
+       color: rgb(25, 145, 248);
+       color: #4582ec;
+       color: #3F73D8;
+      }
+      li {
+        line-height: 1.65;
+      }
+      /* reduce spacing around math formula*/
+      .MathJax_Display {
+        margin: 0em 0em;
+      }   
+    </style>
+    <!-- Add Google search -->
+    <script language="Javascript" type="text/javascript">
+  function my_search_google()
+  {
+    var query = document.getElementById("my-google-search").value;
+    window.open("http://google.com/search?q=" + query
+	+ "%20site:" + "http://r-statistics.co");
+  }
+</script>
+  <style>.ezoic-ad.large-billboard-2 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important; }
+.ezoic-ad.box-3 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important; }
+.ezoic-ad.box-4 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.medrectangle-3 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important; }
+.ezoic-ad.link-h-large-1 { display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-width:728px; }
+.ezoic-ad.banner-1 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important; }
+.ezoic-ad.large-leaderboard-2 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important; }
+.ezoic-ad.leader-1 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important; }
+.ezoic-ad.medrectangle-1 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad{display:inline-block;}
+.adtester-container-100{display:none !important}
+.adtester-container-101{display:none !important}
+.ezoic-floating-bottom { display: none!important; }</style><link rel='canonical' href='http://r-statistics.co/Linear-Regression.html' />
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-107985724-24";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-107985724-24']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'r-statistics.co']);
+_gaq.push(['f._setDomainName', 'r-statistics.co']);
+_gaq.push(['e._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['e._setCustomVar',2,'t','134',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod1',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['f._setCustomVar',2,'domain','r-statistics.co',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1";</script><base href="http://r-statistics.co/Linear-Regression.html"><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 74860;
+var ezdomain = 'r-statistics.co';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>
+__ez.queue.addFile('__ezf_ezosuigeneris', '//g.ezoic.net/ezosuigeneris.js', true, [], true, false, false, false);
+var __ez_ezosuigenerisEvt = function() { __ez.bit.AddAndFire(_ezaq['page_view_id'], [(new __ezDotData('universal_user_id', ezosuigeneris))]); };
+__ez.queue.addFunc('__ez_ezosuigenerisEvt', '__ez_ezosuigenerisEvt', null, false, ['__ezf_ezosuigeneris'], false, false, false, false);</script><script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>__ez.queue.addFile('__ezf_ezosuigenerisc', '//g.ezoic.net/ezosuigenerisc.js?nogen=1', true, [], true, false, false, false);</script></head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+       <!--
+        <ul class="nav nav-pills pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Table of contents<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right" role="menu">
+              <li class="dropdown-header"></li>
+<li class="dropdown-header">Tutorial</li>
+<li><a href="R-Tutorial.html">R Tutorial</a></li>
+<li class="dropdown-header">ggplot2</li>
+<li><a href="ggplot2-Tutorial-With-R.html">ggplot2 Short Tutorial</a></li>
+<li><a href="Complete-Ggplot2-Tutorial-Part1-With-R-Code.html">ggplot2 Tutorial 1 - Intro</a></li>
+<li><a href="Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html">ggplot2 Tutorial 2 - Theme</a></li>
+<li><a href="Top50-Ggplot2-Visualizations-MasterList-R-Code.html">ggplot2 Tutorial 3 - Masterlist</a></li>
+<li><a href="ggplot2-cheatsheet.html">ggplot2 Quickref</a></li>
+<li class="dropdown-header">Foundations</li>
+<li><a href="Linear-Regression.html">Linear Regression</a></li>
+<li><a href="Statistical-Tests-in-R.html">Statistical Tests</a></li>
+<li><a href="Missing-Value-Treatment-With-R.html">Missing Value Treatment</a></li>
+<li><a href="Outlier-Treatment-With-R.html">Outlier Analysis</a></li>
+<li><a href="Variable-Selection-and-Importance-With-R.html">Feature Selection</a></li>
+<li><a href="Model-Selection-in-R.html">Model Selection</a></li>
+<li><a href="Logistic-Regression-With-R.html">Logistic Regression</a></li>
+<li><a href="Environments.html">Advanced Linear Regression</a></li>
+
+<li class="dropdown-header">Advanced Regression Models</li>
+<li><a href="adv-regression-models.html">Advanced Regression Models</a></li>
+
+<li class="dropdown-header">Time Series</li>
+<li><a href="Time-Series-Analysis-With-R.html">Time Series Analysis</a></li>
+<li><a href="Time-Series-Forecasting-With-R.html">Time Series Forecasting </a></li>
+<li><a href="Time-Series-Forecasting-With-R-part2.html">More Time Series Forecasting</a></li>
+
+<li class="dropdown-header">High Performance Computing</li>
+<li><a href="Parallel-Computing-With-R.html">Parallel computing</a></li>
+<li><a href="Strategies-To-Improve-And-Speedup-R-Code.html">Strategies to Speedup R code</a></li>
+
+<li class="dropdown-header">Useful Techniques</li>
+<li><a href="Association-Mining-With-R.html">Association Mining</a></li>
+<li><a href="Multi-Dimensional-Scaling-With-R.html">Multi Dimensional Scaling</a></li>
+<li><a href="Profiling.html">Optimization</a></li>
+<li><a href="Information-Value-With-R.html">InformationValue package</a></li>
+            </ul>
+          </li>
+        </ul>
+        -->
+
+        <ul class="nav nav-pills pull-right">
+          <div class="input-group">
+            <form onsubmit="my_search_google()">
+                <input type="text" class="form-control" id="my-google-search" placeholder="Search..">
+            
+          </form></div><!-- /input-group -->
+        </ul><!-- /.col-lg-6 -->
+
+        <h3 class="muted"><a href="/">r-statistics.co</a><small> by Selva Prabhakaran</small></h3>
+        <hr>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-3" id="nav">
+        <div class="well">
+          <li>
+            <ul class="list-unstyled">
+                <li class="dropdown-header"></li>
+<li class="dropdown-header">Tutorial</li>
+<li><a href="R-Tutorial.html">R Tutorial</a></li>
+<li class="dropdown-header">ggplot2</li>
+<li><a href="ggplot2-Tutorial-With-R.html">ggplot2 Short Tutorial</a></li>
+<li><a href="Complete-Ggplot2-Tutorial-Part1-With-R-Code.html">ggplot2 Tutorial 1 - Intro</a></li>
+<li><a href="Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html">ggplot2 Tutorial 2 - Theme</a></li>
+<li><a href="Top50-Ggplot2-Visualizations-MasterList-R-Code.html">ggplot2 Tutorial 3 - Masterlist</a></li>
+<li><a href="ggplot2-cheatsheet.html">ggplot2 Quickref</a></li>
+<li class="dropdown-header">Foundations</li>
+<li><a href="Linear-Regression.html">Linear Regression</a></li>
+<li><a href="Statistical-Tests-in-R.html">Statistical Tests</a></li>
+<li><a href="Missing-Value-Treatment-With-R.html">Missing Value Treatment</a></li>
+<li><a href="Outlier-Treatment-With-R.html">Outlier Analysis</a></li>
+<li><a href="Variable-Selection-and-Importance-With-R.html">Feature Selection</a></li>
+<li><a href="Model-Selection-in-R.html">Model Selection</a></li>
+<li><a href="Logistic-Regression-With-R.html">Logistic Regression</a></li>
+<li><a href="Environments.html">Advanced Linear Regression</a></li>
+
+<li class="dropdown-header">Advanced Regression Models</li>
+<li><a href="adv-regression-models.html">Advanced Regression Models</a></li>
+
+<li class="dropdown-header">Time Series</li>
+<li><a href="Time-Series-Analysis-With-R.html">Time Series Analysis</a></li>
+<li><a href="Time-Series-Forecasting-With-R.html">Time Series Forecasting </a></li>
+<li><a href="Time-Series-Forecasting-With-R-part2.html">More Time Series Forecasting</a></li>
+
+<li class="dropdown-header">High Performance Computing</li>
+<li><a href="Parallel-Computing-With-R.html">Parallel computing</a></li>
+<li><a href="Strategies-To-Improve-And-Speedup-R-Code.html">Strategies to Speedup R code</a></li>
+
+<li class="dropdown-header">Useful Techniques</li>
+<li><a href="Association-Mining-With-R.html">Association Mining</a></li>
+<li><a href="Multi-Dimensional-Scaling-With-R.html">Multi Dimensional Scaling</a></li>
+<li><a href="Profiling.html">Optimization</a></li>
+<li><a href="Information-Value-With-R.html">InformationValue package</a></li>
+            </ul>
+          </li>
+        </div>
+
+        <div class="well">
+          <p>Stay up-to-date. <a href="https://docs.google.com/forms/d/1xkMYkLNFU9U39Dd8S_2JC0p8B5t6_Yq6zUQjanQQJpY/viewform">Subscribe!</a></p>
+          <p><a href="https://docs.google.com/forms/d/13GrkCFcNa-TOIllQghsz2SIEbc-YqY9eJX02B19l5Ow/viewform">Chat!</a></p>
+        </div>
+
+        
+        <h4>Contents</h4>
+        
+
+          <ul class="list-unstyled" id="toc"></ul>
+        <!--
+          <hr>
+          <p><a href="/contribute.html">How to contribute</a></p>
+
+          <p><a class="btn btn-primary" href="">Edit this page</a></p>
+        -->  
+        <span id="ezoic-pub-ad-placeholder-102" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important;' class='ezoic-ad large-billboard-2 adtester-container adtester-container-102' data-ez-name='r_statistics_co-large-billboard-2'><span id='div-gpt-ad-r_statistics_co-large-billboard-2-0' ezaw='300' ezah='250' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[300,250],'r_statistics_co-large-billboard-2','ezslot_1']));</script></span><span style='width:300px;display:block;height:14px;margin:auto' class='reportline'><span style='text-align:center;font-size: smaller;float:left;line-height:normal;'><a href='https://www.ezoic.com/what-is-ezoic/' target='_blank' style='cursor:pointer'/><img src='https://d3hwh14livah35.cloudfront.net/ezoic.png' style='height:12px;padding:2px;border:0px;cursor:pointer'/></a></span><span id="ez-report-ad-button" name="?pageview_id=2ffd8208-8406-4b25-5251-7c1f90c4cc07&ad_position_id=102&impression_group_id=r_statistics_co-large-billboard-2/2018-08-30/1888227&ad_size=300x250&domain_id=74860&url=http://r-statistics.co/Linear-Regression.html" style='cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;'>report this ad</span></span></span></div>
+
+        <div id="content" class="col-xs-12 col-sm-8 pull-right">
+
+          <h1><span id="ezoic-pub-ad-placeholder-109" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important;' class='ezoic-ad box-3 adtester-container adtester-container-109' data-ez-name='r_statistics_co-box-3'><span id='div-gpt-ad-r_statistics_co-box-3-0' ezaw='728' ezah='90' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[728,90],'r_statistics_co-box-3','ezslot_4']));</script></span></span>Linear Regression</h1>
+<blockquote>
+<p>Linear regression is used to predict the value of an outcome variable <span class="math inline"><em>Y</em></span> based on one or more input predictor variables <span class="math inline"><em>X</em></span>. The aim is to establish a linear relationship (a mathematical formula) between the predictor variable(s) and the response variable, so that, we can use this formula to estimate the value of the response <span class="math inline"><em>Y</em></span>, when only the predictors (<span class="math inline"><em>X</em><em>s</em></span>) values are known.</p>
+</blockquote>
+<h2><span id="ezoic-pub-ad-placeholder-104" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad box-4 adtester-container adtester-container-104' data-ez-name='r_statistics_co-box-4'><span id='div-gpt-ad-r_statistics_co-box-4-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'r_statistics_co-box-4','ezslot_3']));</script></span></span>Introduction</h2>
+<p>The aim of linear regression is to model a continuous variable <span class="math inline"><em>Y</em></span> as a mathematical function of one or more <span class="math inline"><em>X</em></span> variable(s), so that we can use this regression model to predict the <span class="math inline"><em>Y</em></span> when only the <span class="math inline"><em>X</em></span> is known. This mathematical equation can be generalized as follows:</p>
+<p><br><span class="math display"><em>Y</em> = <em>β</em><sub>1</sub> + <em>β</em><sub>2</sub><em>X</em> + <em>ϵ</em></span><br></p>
+<p>where, <span class="math inline"><em>β</em><sub>1</sub></span> is the intercept and <span class="math inline"><em>β</em><sub>2</sub></span> is the slope. Collectively, they are called <em>regression coefficients</em>. <span class="math inline"><em>ϵ</em></span> is the error term, the part of <span class="math inline"><em>Y</em></span> the regression model is unable to explain.<span id="ezoic-pub-ad-placeholder-112" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important;' class='ezoic-ad medrectangle-3 adtester-container adtester-container-112' data-ez-name='r_statistics_co-medrectangle-3'><span id='div-gpt-ad-r_statistics_co-medrectangle-3-0' ezaw='728' ezah='90' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[728,90],'r_statistics_co-medrectangle-3','ezslot_6']));</script></span></span></p>
+<p><img src="screenshots/linear-regression-small.png" width="393" height="352"></p>
+<h2>Example Problem</h2>
+<p>For this analysis, we will use the <em>cars</em> dataset that comes with R by default. <code>cars</code> is a standard built-in dataset, that makes it convenient to demonstrate linear regression in a simple and easy to understand fashion. You can access this dataset simply by typing in <code>cars</code> in your R console. You will find that it consists of 50 observations(rows) and 2 variables (columns) – <code>dist</code> and <code>speed</code>. Lets print out the first six observations here..</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(cars)  <span class="co"># display the first 6 observations</span>
+<span class="co">#&gt;   speed dist</span>
+<span class="co">#&gt; 1     4    2</span>
+<span class="co">#&gt; 2     4   10</span>
+<span class="co">#&gt; 3     7    4</span>
+<span class="co">#&gt; 4     7   22</span>
+<span class="co">#&gt; 5     8   16</span>
+<span class="co">#&gt; 6     9   10</span></code></pre></div>
+<p>Before we begin building the regression model, it is a good practice to analyze and understand the variables. The graphical analysis and correlation study below will help with this.</p>
+<h2>Graphical Analysis</h2>
+<p>The aim of this exercise is to build a simple regression model that we can use to predict Distance (dist) by establishing a statistically significant linear relationship with Speed (speed). But before jumping in to the syntax, lets try to understand these variables graphically. Typically, for each of the independent variables (predictors), the following plots are drawn to visualize the following behavior:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Scatter plot</strong>: Visualize the linear relationship between the predictor and response</li>
+<li><strong>Box plot</strong>: To spot any outlier observations in the variable. Having outliers in your predictor can drastically affect the predictions as they can easily affect the direction/slope of the line of best fit.</li>
+<li><strong>Density plot</strong>: To see the distribution of the predictor variable. Ideally, a close to normal distribution (a bell shaped curve), without being skewed to the left or right is preferred. Let us see how to make each one of them.</li>
+</ol>
+<h3>Scatter Plot</h3>
+<p>Scatter plots can help visualize any linear relationships between the dependent (response) variable and independent (predictor) variables. Ideally, if you are having multiple predictor variables, a scatter plot is drawn for each one of them against the response, along with the line of best as seen below.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scatter.smooth</span>(<span class="dt">x=</span>cars$speed, <span class="dt">y=</span>cars$dist, <span class="dt">main=</span><span class="st">"Dist ~ Speed"</span>)  <span class="co"># scatterplot</span></code></pre></div>
+<p><img src="screenshots/dist-speed-scatterplot.png" width="528" height="371"></p>
+<p>The scatter plot along with the smoothing line above suggests a linearly increasing relationship between the ‘dist’ and ‘speed’ variables. This is a good thing, because, one of the underlying assumptions in linear regression is that the relationship between the response and predictor variables is linear and additive.</p>
+<h3>BoxPlot – Check for outliers</h3>
+<p>Generally, any datapoint that lies outside the 1.5 * interquartile-range (<span class="math inline">1.5 * <em>I</em><em>Q</em><em>R</em></span>) is considered an outlier, where, IQR is calculated as the distance between the 25th percentile and 75th percentile values for that variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))  <span class="co"># divide graph area in 2 columns</span>
+<span class="kw">boxplot</span>(cars$speed, <span class="dt">main=</span><span class="st">"Speed"</span>, <span class="dt">sub=</span><span class="kw">paste</span>(<span class="st">"Outlier rows: "</span>, <span class="kw">boxplot.stats</span>(cars$speed)$out))  <span class="co"># box plot for 'speed'</span>
+<span class="kw">boxplot</span>(cars$dist, <span class="dt">main=</span><span class="st">"Distance"</span>, <span class="dt">sub=</span><span class="kw">paste</span>(<span class="st">"Outlier rows: "</span>, <span class="kw">boxplot.stats</span>(cars$dist)$out))  <span class="co"># box plot for 'distance'</span></code></pre></div>
+<p><img src="screenshots/boxplot.png" width="528" height="289"><span id="ezoic-pub-ad-placeholder-113" class="ezoic-adpicker-ad"></span><span style='display:inline-block;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-width:728px;' class='ezoic-ad link-h-large-1 adtester-container adtester-container-113' data-ez-name='r_statistics_co-link-h-large-1'><div id='r_statistics_co-link-h-large-1' class='ezo_link_unit_m'><script type="text/javascript">window._mNHandle = window._mNHandle || {};window._mNHandle.queue = window._mNHandle.queue || [];medianet_versionId = "121199";(function() {var sct = document.createElement("script"), sctHl = document.getElementsByTagName("script")[0], isSSL = 'https:' == document.location.protocol;sct.type = "text/javascript";sct.src = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/dmedianet.js?cid=8CUKY1173' + (isSSL ? '&https=1' : '')+'';sct.async = "async";sctHl.parentNode.insertBefore(sct, sctHl);})();</script><span id="527397821"><script type="text/javascript">try {window._mNHandle.queue.push(function () {window._mNDetails.loadTag("527397821", "728x15", "527397821");});}catch (error) {}</script></span></div></span></p>
+<h3>Density plot – Check if the response variable is close to normality</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(e1071)
+<span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))  <span class="co"># divide graph area in 2 columns</span>
+<span class="kw">plot</span>(<span class="kw">density</span>(cars$speed), <span class="dt">main=</span><span class="st">"Density Plot: Speed"</span>, <span class="dt">ylab=</span><span class="st">"Frequency"</span>, <span class="dt">sub=</span><span class="kw">paste</span>(<span class="st">"Skewness:"</span>, <span class="kw">round</span>(e1071::<span class="kw">skewness</span>(cars$speed), <span class="dv">2</span>)))  <span class="co"># density plot for 'speed'</span>
+<span class="kw">polygon</span>(<span class="kw">density</span>(cars$speed), <span class="dt">col=</span><span class="st">"red"</span>)
+<span class="kw">plot</span>(<span class="kw">density</span>(cars$dist), <span class="dt">main=</span><span class="st">"Density Plot: Distance"</span>, <span class="dt">ylab=</span><span class="st">"Frequency"</span>, <span class="dt">sub=</span><span class="kw">paste</span>(<span class="st">"Skewness:"</span>, <span class="kw">round</span>(e1071::<span class="kw">skewness</span>(cars$dist), <span class="dv">2</span>)))  <span class="co"># density plot for 'dist'</span>
+<span class="kw">polygon</span>(<span class="kw">density</span>(cars$dist), <span class="dt">col=</span><span class="st">"red"</span>)</code></pre></div>
+<p><img src="screenshots/density-plot.png" width="528" height="289"><span id="ezoic-pub-ad-placeholder-106" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important;' class='ezoic-ad banner-1 adtester-container adtester-container-106' data-ez-name='r_statistics_co-banner-1'><span id='div-gpt-ad-r_statistics_co-banner-1-0' ezaw='580' ezah='400' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[580,400],'r_statistics_co-banner-1','ezslot_5']));</script></span></span></p>
+<h2>Correlation</h2>
+<p>Correlation is a statistical measure that suggests the level of linear dependence between two variables, that occur in pair – just like what we have here in speed and dist. Correlation can take values between -1 to +1. If we observe for every instance where speed increases, the distance also increases along with it, then there is a high positive correlation between them and therefore the correlation between them will be closer to 1. The opposite is true for an inverse relationship, in which case, the correlation between the variables will be close to -1.</p>
+<p>A value closer to 0 suggests a weak relationship between the variables. A low correlation (-0.2 &lt; x &lt; 0.2) probably suggests that much of variation of the response variable (<span class="math inline"><em>Y</em></span>) is unexplained by the predictor (<span class="math inline"><em>X</em></span>), in which case, we should probably look for better explanatory variables.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(cars$speed, cars$dist)  <span class="co"># calculate correlation between speed and distance </span>
+<span class="co">#&gt; [1] 0.8068949</span></code></pre></div>
+<h2><span id="ezoic-pub-ad-placeholder-110" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important;' class='ezoic-ad large-leaderboard-2 adtester-container adtester-container-110' data-ez-name='r_statistics_co-large-leaderboard-2'><span id='div-gpt-ad-r_statistics_co-large-leaderboard-2-0' ezaw='728' ezah='90' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[728,90],'r_statistics_co-large-leaderboard-2','ezslot_2']));</script></span></span>Build Linear Model</h2>
+<p>Now that we have seen the linear relationship pictorially in the scatter plot and by computing the correlation, lets see the syntax for building the linear model. The function used for building linear models is <code>lm()</code>. The <code>lm()</code> function takes in two main arguments, namely: 1. Formula 2. Data. The data is typically a data.frame and the formula is a object of class <code>formula</code>. But the most common convention is to write out the formula directly in place of the argument as written below.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">linearMod &lt;-<span class="st"> </span><span class="kw">lm</span>(dist ~<span class="st"> </span>speed, <span class="dt">data=</span>cars)  <span class="co"># build linear regression model on full data</span>
+<span class="kw">print</span>(linearMod)
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = dist ~ speed, data = cars)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt; (Intercept)        speed  </span>
+<span class="co">#&gt;     -17.579        3.932</span></code></pre></div>
+<p>Now that we have built the linear model, we also have established the relationship between the predictor and response in the form of a mathematical formula for Distance (dist) as a function for speed. For the above output, you can notice the ‘Coefficients’ part having two components: <em>Intercept</em>: -17.579, <em>speed</em>: 3.932 These are also called the beta coefficients. In other words, <strong><br><span class="math display"><em>d</em><em>i</em><em>s</em><em>t</em> = <em>I</em><em>n</em><em>t</em><em>e</em><em>r</em><em>c</em><em>e</em><em>p</em><em>t</em> + (<em>β</em> ∗ <em>s</em><em>p</em><em>e</em><em>e</em><em>d</em>)</span><br></strong> =&gt; dist = −17.579 + 3.932∗speed</p>
+<h2><span id="ezoic-pub-ad-placeholder-111" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:110px;min-width:728px;text-align:center !important;' class='ezoic-ad leader-1 adtester-container adtester-container-111' data-ez-name='r_statistics_co-leader-1'><span id='div-gpt-ad-r_statistics_co-leader-1-0' ezaw='728' ezah='90' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[728,90],'r_statistics_co-leader-1','ezslot_0']));</script></span></span>Linear Regression Diagnostics</h2>
+<p>Now the linear model is built and we have a formula that we can use to predict the dist value if a corresponding speed is known. Is this enough to actually use this model? NO! Before using a regression model, you have to ensure that it is statistically significant. How do you ensure this? Lets begin by printing the summary statistics for linearMod.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(linearMod)  <span class="co"># model summary</span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = dist ~ speed, data = cars)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -29.069  -9.525  -2.272   9.215  43.201 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class="co">#&gt; (Intercept) -17.5791     6.7584  -2.601   0.0123 *  </span>
+<span class="co">#&gt; speed         3.9324     0.4155   9.464 1.49e-12 ***</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 15.38 on 48 degrees of freedom</span>
+<span class="co">#&gt; Multiple R-squared:  0.6511, Adjusted R-squared:  0.6438 </span>
+<span class="co">#&gt; F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12</span></code></pre></div>
+<h2>The p Value: Checking for statistical significance</h2>
+<p>The summary statistics above tells us a number of things. One of them is the model p-Value (bottom last line) and the p-Value of individual predictor variables (extreme right column under ‘Coefficients’). The p-Values are very important because, We can consider a linear model to be statistically significant only when both these p-Values are less that the pre-determined statistical significance level, which is ideally 0.05. This is visually interpreted by the significance stars at the end of the row. The more the stars beside the variable’s p-Value, the more significant the variable.</p>
+<h4>Null and alternate hypothesis</h4>
+<p>When there is a p-value, there is a hull and alternative hypothesis associated with it. In Linear Regression, the Null Hypothesis is that the coefficients associated with the variables is equal to zero. The alternate hypothesis is that the coefficients are not equal to zero (i.e.&nbsp;there exists a relationship between the independent variable in question and the dependent variable).</p>
+<h4>t-value</h4>
+<p>We can interpret the t-value something like this. A larger <em>t-value</em> indicates that it is less likely that the coefficient is not equal to zero purely by chance. So, higher the t-value, the better.</p>
+<p><em>Pr(&gt;|t|)</em> or <em>p-value</em> is the probability that you get a t-value as high or higher than the observed value when the Null Hypothesis (the <span class="math inline"><em>β</em></span> coefficient is equal to zero or that there is no relationship) is true. So if the <em>Pr(&gt;|t|)</em> is low, the coefficients are significant (significantly different from zero). If the <em>Pr(&gt;|t|)</em> is high, the coefficients are not significant.</p>
+<p>What this means to us? when p Value is less than significance level (&lt; 0.05), we can safely reject the null hypothesis that the co-efficient <em>β</em> of the predictor is zero. In our case, <code>linearMod</code>, both these p-Values are well below the 0.05 threshold, so we can conclude our model is indeed statistically significant.</p>
+<p>It is absolutely important for the model to be statistically significant before we can go ahead and use it to predict (or estimate) the dependent variable, otherwise, the confidence in predicted values from that model reduces and may be construed as an event of chance.</p>
+<h2>How to calculate the t Statistic and p-Values?</h2>
+<p>When the model co-efficients and standard error are known, the formula for calculating t Statistic and p-Value is as follows: <br><span class="math display">$$t−Statistic = {β−coefficient \over Std.Error}$$</span><br></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">modelSummary &lt;-<span class="st"> </span><span class="kw">summary</span>(linearMod)  <span class="co"># capture model summary as an object</span>
+modelCoeffs &lt;-<span class="st"> </span>modelSummary$coefficients  <span class="co"># model coefficients</span>
+beta.estimate &lt;-<span class="st"> </span>modelCoeffs[<span class="st">"speed"</span>, <span class="st">"Estimate"</span>]  <span class="co"># get beta estimate for speed</span>
+std.error &lt;-<span class="st"> </span>modelCoeffs[<span class="st">"speed"</span>, <span class="st">"Std. Error"</span>]  <span class="co"># get std.error for speed</span>
+t_value &lt;-<span class="st"> </span>beta.estimate/std.error  <span class="co"># calc t statistic</span>
+p_value &lt;-<span class="st"> </span><span class="dv">2</span>*<span class="kw">pt</span>(-<span class="kw">abs</span>(t_value), <span class="dt">df=</span><span class="kw">nrow</span>(cars)-<span class="kw">ncol</span>(cars))  <span class="co"># calc p Value</span>
+f_statistic &lt;-<span class="st"> </span>linearMod$fstatistic[<span class="dv">1</span>]  <span class="co"># fstatistic</span>
+f &lt;-<span class="st"> </span><span class="kw">summary</span>(linearMod)$fstatistic  <span class="co"># parameters for model p-value calc</span>
+model_p &lt;-<span class="st"> </span><span class="kw">pf</span>(f[<span class="dv">1</span>], f[<span class="dv">2</span>], f[<span class="dv">3</span>], <span class="dt">lower=</span><span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## t Value:  9.46399</code></pre>
+<pre><code>## p Value:  1.489836e-12</code></pre>
+<pre><code>## Model F Statistic:  89.56711 1 48</code></pre>
+<pre><code>## Model p-Value:  1.489836e-12</code></pre>
+<h2>R-Squared and Adj R-Squared</h2>
+<p>The actual information in a data is the total variation it contains, remember?. What R-Squared tells us is the proportion of variation in the dependent (response) variable that has been explained by this model.</p>
+<p><br><span class="math display">$$ R^{2} = 1 - \frac{SSE}{SST}$$</span><br></p>
+<p>where, <span class="math inline"><em>S</em><em>S</em><em>E</em></span> is the <em>sum of squared errors</em> given by <span class="math inline">$SSE = \sum_{i}^{n} \left( y_{i} - \hat{y_{i}} \right) ^{2}$</span> and <span class="math inline">$SST = \sum_{i}^{n} \left( y_{i} - \bar{y_{i}} \right) ^{2}$</span> is the <em>sum of squared total</em>. Here, <span class="math inline">$\hat{y_{i}}$</span> is the fitted value for observation <span class="math inline"><em>i</em></span> and <span class="math inline">$\bar{y}$</span> is the mean of <span class="math inline"><em>Y</em></span>.</p>
+<p>We don’t necessarily discard a model based on a low R-Squared value. Its a better practice to look at the AIC and prediction accuracy on validation sample when deciding on the efficacy of a model.</p>
+<p><strong>Now thats about R-Squared. What about adjusted R-Squared?</strong> As you add more <span class="math inline"><em>X</em></span> variables to your model, the R-Squared value of the new bigger model will always be greater than that of the smaller subset. This is because, since all the variables in the original model is also present, their contribution to explain the dependent variable will be present in the super-set as well, therefore, whatever new variable we add can only add (if not significantly) to the variation that was already explained. It is here, the adjusted R-Squared value comes to help. Adj R-Squared penalizes total value for the number of terms (read predictors) in your model. Therefore when comparing nested models, it is a good practice to look at adj-R-squared value over R-squared.</p>
+<p><br><span class="math display">$$ R^{2}_{adj} = 1 - \frac{MSE}{MST}$$</span><br></p>
+<p>where, <span class="math inline"><em>M</em><em>S</em><em>E</em></span> is the <em>mean squared error</em> given by <span class="math inline">$MSE = \frac{SSE}{\left( n-q \right)}$</span> and <span class="math inline">$MST = \frac{SST}{\left( n-1 \right)}$</span> is the <em>mean squared total</em>, where <span class="math inline"><em>n</em></span> is the number of observations and <span class="math inline"><em>q</em></span> is the number of coefficients in the model.</p>
+<p>Therefore, by moving around the numerators and denominators, the relationship between <span class="math inline"><em>R</em><sup>2</sup></span> and <span class="math inline"><em>R</em><sub><em>a</em><em>d</em><em>j</em></sub><sup>2</sup></span> becomes:</p>
+<p><br><span class="math display">$$R^{2}_{adj} =  1 - \left( \frac{\left( 1 - R^{2}\right) \left(n-1\right)}{n-q}\right)$$</span><br></p>
+<h2>Standard Error and F-Statistic</h2>
+<p>Both standard errors and F-statistic are measures of goodness of fit.</p>
+<p><br><span class="math display">$$Std. Error = \sqrt{MSE} = \sqrt{\frac{SSE}{n-q}}$$</span><br></p>
+<p><br><span class="math display">$$F-statistic = \frac{MSR}{MSE}$$</span><br></p>
+<p>where, <span class="math inline"><em>n</em></span> is the number of observations, <span class="math inline"><em>q</em></span> is the number of coefficients and <span class="math inline"><em>M</em><em>S</em><em>R</em></span> is the <em>mean square regression</em>, calculated as,</p>
+<p><br><span class="math display">$$MSR=\frac{\sum_{i}^{n}\left( \hat{y_{i} - \bar{y}}\right)}{q-1} = \frac{SST - SSE}{q - 1}$$</span><br></p>
+<h2>AIC and BIC</h2>
+<p>The Akaike’s information criterion - AIC (Akaike, 1974) and the Bayesian information criterion - BIC (Schwarz, 1978) are measures of the goodness of fit of an estimated statistical model and can also be used for model selection. Both criteria depend on the maximized value of the likelihood function L for the estimated model.</p>
+<p>The AIC is defined as:</p>
+<p><br><span class="math display"><em>A</em><em>I</em><em>C</em> = (−2) × <em>l</em><em>n</em>(<em>L</em>) + (2×<em>k</em>)</span><br></p>
+<p>where, k is the number of model parameters and the BIC is defined as:</p>
+<p><br><span class="math display"><em>B</em><em>I</em><em>C</em> = (−2) × <em>l</em><em>n</em>(<em>L</em>) + <em>k</em> × <em>l</em><em>n</em>(<em>n</em>)</span><br></p>
+<p>where, n is the sample size.</p>
+<p>For model comparison, the model with the lowest AIC and BIC score is preferred.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">AIC</span>(linearMod)  <span class="co"># AIC =&gt; 419.1569</span>
+<span class="kw">BIC</span>(linearMod)  <span class="co"># BIC =&gt; 424.8929</span></code></pre></div>
+<h2>How to know if the model is best fit for your data?</h2>
+<p>The most common metrics to look at while selecting the model are:</p>
+<table>
+<colgroup>
+<col width="57%">
+<col width="42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">STATISTIC</th>
+<th align="left">CRITERION</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">R-Squared</td>
+<td align="left">Higher the better <em>(&gt; 0.70)</em></td>
+</tr>
+<tr class="even">
+<td align="left">Adj R-Squared</td>
+<td align="left">Higher the better</td>
+</tr>
+<tr class="odd">
+<td align="left">F-Statistic</td>
+<td align="left">Higher the better</td>
+</tr>
+<tr class="even">
+<td align="left">Std. Error</td>
+<td align="left">Closer to zero the better</td>
+</tr>
+<tr class="odd">
+<td align="left">t-statistic</td>
+<td align="left">Should be greater 1.96 for p-value to be less than 0.05</td>
+</tr>
+<tr class="even">
+<td align="left">AIC</td>
+<td align="left">Lower the better</td>
+</tr>
+<tr class="odd">
+<td align="left">BIC</td>
+<td align="left">Lower the better</td>
+</tr>
+<tr class="even">
+<td align="left">Mallows cp</td>
+<td align="left">Should be close to the number of predictors in model</td>
+</tr>
+<tr class="odd">
+<td align="left">MAPE (Mean absolute percentage error)</td>
+<td align="left">Lower the better</td>
+</tr>
+<tr class="even">
+<td align="left">MSE (Mean squared error)</td>
+<td align="left">Lower the better</td>
+</tr>
+<tr class="odd">
+<td align="left">Min_Max Accuracy =&gt; mean(min(actual, predicted)/max(actual, predicted))</td>
+<td align="left">Higher the better</td>
+</tr>
+</tbody>
+</table>
+<h2>Predicting Linear Models</h2>
+<p>So far we have seen how to build a linear regression model using the whole dataset. If we build it that way, there is no way to tell how the model will perform with new data. So the preferred practice is to split your dataset into a 80:20 sample (training:test), then, build the model on the 80% sample and then use the model thus built to predict the dependent variable on test data.</p>
+<p>Doing it this way, we will have the model predicted values for the 20% data (test) as well as the actuals (from the original dataset). By calculating accuracy measures (like min_max accuracy) and error rates (MAPE or MSE), we can find out the prediction accuracy of the model. Now, lets see how to actually do this..</p>
+<h4>Step 1: Create the training (development) and test (validation) data samples from original data.</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create Training and Test data -</span>
+<span class="kw">set.seed</span>(<span class="dv">100</span>)  <span class="co"># setting seed to reproduce results of random sampling</span>
+trainingRowIndex &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1</span>:<span class="kw">nrow</span>(cars), <span class="fl">0.8</span>*<span class="kw">nrow</span>(cars))  <span class="co"># row indices for training data</span>
+trainingData &lt;-<span class="st"> </span>cars[trainingRowIndex, ]  <span class="co"># model training data</span>
+testData  &lt;-<span class="st"> </span>cars[-trainingRowIndex, ]   <span class="co"># test data</span></code></pre></div>
+<h4>Step 2: Develop the model on the training data and use it to predict the distance on test data</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Build the model on training data -</span>
+lmMod &lt;-<span class="st"> </span><span class="kw">lm</span>(dist ~<span class="st"> </span>speed, <span class="dt">data=</span>trainingData)  <span class="co"># build the model</span>
+distPred &lt;-<span class="st"> </span><span class="kw">predict</span>(lmMod, testData)  <span class="co"># predict distance</span></code></pre></div>
+<h4>Step 3: Review diagnostic measures.</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span> (lmMod)  <span class="co"># model summary</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Call:</span>
+<span class="co">#&gt; lm(formula = dist ~ speed, data = trainingData)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residuals:</span>
+<span class="co">#&gt;     Min      1Q  Median      3Q     Max </span>
+<span class="co">#&gt; -23.350 -10.771  -2.137   9.255  42.231 </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Coefficients:</span>
+<span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    </span>
+<span class="co">#&gt; (Intercept)  -22.657      7.999  -2.833  0.00735 ** </span>
+<span class="co">#&gt; speed          4.316      0.487   8.863 8.73e-11 ***</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Residual standard error: 15.84 on 38 degrees of freedom</span>
+<span class="co">#&gt; Multiple R-squared:  0.674,  Adjusted R-squared:  0.6654 </span>
+<span class="co">#&gt; F-statistic: 78.56 on 1 and 38 DF,  p-value: 8.734e-11</span>
+<span class="kw">AIC</span> (lmMod)  <span class="co"># Calculate akaike information criterion</span>
+<span class="co">#&gt; [1] 338.4489</span></code></pre></div>
+<p>From the model summary, the model p value and predictor’s p value are less than the significance level, so we know we have a statistically significant model. Also, the R-Sq and Adj R-Sq are comparative to the original model built on full data.</p>
+<h4>Step 4: Calculate prediction accuracy and error rates</h4>
+<p>A simple correlation between the actuals and predicted values can be used as a form of accuracy measure. A higher correlation accuracy implies that the actuals and predicted values have similar directional movement, i.e.&nbsp;when the actuals values increase the predicteds also increase and vice-versa.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">actuals_preds &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">cbind</span>(<span class="dt">actuals=</span>testData$dist, <span class="dt">predicteds=</span>distPred))  <span class="co"># make actuals_predicteds dataframe.</span>
+correlation_accuracy &lt;-<span class="st"> </span><span class="kw">cor</span>(actuals_preds)  <span class="co"># 82.7%</span>
+<span class="kw">head</span>(actuals_preds)
+<span class="co">#&gt;    actuals predicteds</span>
+<span class="co">#&gt; 1        2  -5.392776</span>
+<span class="co">#&gt; 4       22   7.555787</span>
+<span class="co">#&gt; 8       26  20.504349</span>
+<span class="co">#&gt; 20      26  37.769100</span>
+<span class="co">#&gt; 26      54  42.085287</span>
+<span class="co">#&gt; 31      50  50.717663</span></code></pre></div>
+<p>Now lets calculate the Min Max accuracy and MAPE: <strong><br><span class="math display">$$MinMaxAccuracy = mean \left( \frac{min\left(actuals, predicteds\right)}{max\left(actuals, predicteds \right)} \right)$$</span><br></strong></p>
+<p><strong><br><span class="math display">$$MeanAbsolutePercentageError \ (MAPE) = mean\left( \frac{abs\left(predicteds−actuals\right)}{actuals}\right)$$</span><br></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">min_max_accuracy &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">apply</span>(actuals_preds, <span class="dv">1</span>, min) /<span class="st"> </span><span class="kw">apply</span>(actuals_preds, <span class="dv">1</span>, max))  
+<span class="co"># =&gt; 58.42%, min_max accuracy</span>
+mape &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">abs</span>((actuals_preds$predicteds -<span class="st"> </span>actuals_preds$actuals))/actuals_preds$actuals)  
+<span class="co"># =&gt; 48.38%, mean absolute percentage deviation</span></code></pre></div>
+<h2>k- Fold Cross validation</h2>
+<p>Suppose, the model predicts satisfactorily on the 20% split (test data), is that enough to believe that your model will perform equally well all the time? It is important to rigorously test the model’s performance as much as possible. One way is to ensure that the model equation you have will perform well, when it is ‘built’ on a different subset of training data and predicted on the remaining data.</p>
+<p>How to do this is? Split your data into ‘k’ mutually exclusive random sample portions. Keeping each portion as test data, we build the model on the remaining (k-1 portion) data and calculate the mean squared error of the predictions. This is done for each of the ‘k’ random sample portions. Then finally, the average of these mean squared errors (for ‘k’ portions) is computed. We can use this metric to compare different linear models.</p>
+<p>By doing this, we need to check two things:</p>
+<ol style="list-style-type: decimal">
+<li>If the model’s prediction accuracy isn’t varying too much for any one particular sample, and</li>
+<li>If the lines of best fit don’t vary too much with respect the the slope and level.</li>
+</ol>
+<p>In other words, they should be parallel and as close to each other as possible. You can find a more detailed explanation for interpreting the cross validation charts when you learn about advanced linear model building.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(DAAG)
+cvResults &lt;-<span class="st"> </span><span class="kw">suppressWarnings</span>(<span class="kw">CVlm</span>(<span class="dt">df=</span>cars, <span class="dt">form.lm=</span>dist ~<span class="st"> </span>speed, <span class="dt">m=</span><span class="dv">5</span>, <span class="dt">dots=</span><span class="ot">FALSE</span>, <span class="dt">seed=</span><span class="dv">29</span>, <span class="dt">legend.pos=</span><span class="st">"topleft"</span>,  <span class="dt">printit=</span><span class="ot">FALSE</span>, <span class="dt">main=</span><span class="st">"Small symbols are predicted values while bigger ones are actuals."</span>));  <span class="co"># performs the CV</span>
+<span class="kw">attr</span>(cvResults, <span class="st">'ms'</span>)  <span class="co"># =&gt; 251.2783 mean squared error</span></code></pre></div>
+<p>In the below plot, Are the dashed lines parallel? Are the small and big symbols are not over dispersed for one particular color?</p>
+<p><img src="screenshots/cv-plot.png" width="528" height="528"></p>
+<h3>Where to go from here?</h3>
+<p>We have covered the basic concepts about linear regression. Besides these, you need to understand that linear regression is based on certain underlying <a href="Assumptions-of-Linear-Regression.html">assumptions</a> that must be taken care especially when working with multiple <span class="math inline"><em>X</em><em>s</em></span>. Once you are familiar with that, the <a href="adv-regression-models-html">advanced regression models</a> will show you around the various special cases where a different form of regression would be more suitable.</p>
+
+
+        <span id="ezoic-pub-ad-placeholder-105" class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad medrectangle-1 adtester-container adtester-container-105' data-ez-name='r_statistics_co-medrectangle-1'><span id='div-gpt-ad-r_statistics_co-medrectangle-1-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'r_statistics_co-medrectangle-1','ezslot_7']));</script></span><span style='width:336px;display:block;height:14px;margin:auto' class='reportline'><span style='text-align:center;font-size: smaller;float:left;line-height:normal;'><a href='https://www.ezoic.com/what-is-ezoic/' target='_blank' style='cursor:pointer'/><img src='https://d3hwh14livah35.cloudfront.net/ezoic.png' style='height:12px;padding:2px;border:0px;cursor:pointer'/></a></span><span id="ez-report-ad-button" name="?pageview_id=2ffd8208-8406-4b25-5251-7c1f90c4cc07&ad_position_id=105&impression_group_id=r_statistics_co-medrectangle-1/2018-08-30/1873977&ad_size=336x280&domain_id=74860&url=http://r-statistics.co/Linear-Regression.html" style='cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;'>report this ad</span></span></span></div>
+      </div>
+
+      <div class="footer">
+        <hr>
+        <p>© 2016-17 Selva Prabhakaran. Powered by <a href="http://jekyllrb.com/">jekyll</a>,
+          <a href="http://yihui.name/knitr/">knitr</a>, and
+          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>.
+          This work is licensed under the <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons License.</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="www/bootstrap.min.js"></script>
+  <script src="www/toc.js"></script>
+  <!-- MathJax Script -->
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+  </script>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <!-- Google Analytics Code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-69351797-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <style type="text/css">
+  /* reduce spacing around math formula*/
+    .MathJax_Display {
+      margin: 0em 0em;
+    }
+    body {
+      font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 400;
+    }
+
+    blockquote p {
+      line-height: 1.75;
+      color: #717171;
+    }
+
+    .well li{
+      line-height: 28px;
+    }
+
+    li.dropdown-header {
+      display: block;
+      padding: 0px;
+      font-size: 14px;
+    }
+  </style>
+  
+
+		<!-- Ezoic - Anchor Ad - bottom_floating -->
+		<div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span id="ezoic-pub-ad-placeholder-100"></span><!-- placeholder 100 blocked.  Reason : no sizes --></center><span class='ezmob-footer-close' onclick="document.getElementById('ezmobfooter').style.display='none';">x</span></div>
+		<!-- End Ezoic - Anchor Ad - bottom_floating -->
+		<script type="text/javascript" style='display:none;'>
+var __ez_dims = (function() {
+	var setCookie = function( name, content, expiry ) {
+		return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'');
+	};
+	var ffid = 1;
+	var oh = window.screen.height;
+	var ow = window.screen.width;
+	var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+	var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+	var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+	var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+	setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+	setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+})();
+</script><script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//r-statistics.co/detroitchicago/edmonton.webp?a=a&cb=177-0&shcb=30', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//r-statistics.co/porpoiseant/jellyfish.webp?a=a&cb=177-0&shcb=30', false, [], true, false, false, false);
+</script>
+
+
+		<script type="text/javascript">
+		(function(f,a){function g(b,a,c){b.addEventListener?b.addEventListener(a,c):b.attachEvent("on"+a,function(){c.call(b)})}function k(b){b&&("string"==typeof b["class"]&&b["class"]&&a.getElementById("uglipop_popbox").setAttribute("class",b["class"]),b.keepLayout&&!b["class"]&&a.getElementById("uglipop_popbox").setAttribute("style","position:relative;height:300px;width:300px;background-color:white;opacity:1;"),"string"==typeof b.content&&b.content&&"html"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=b.content),"string"==typeof b.content&&b.content&&"div"==b.source&&(a.getElementById("uglipop_popbox").innerHTML=a.getElementById(b.content).innerHTML));a.getElementById("uglipop_overlay_wrapper").style.display="";a.getElementById("uglipop_overlay").style.display="";a.getElementById("uglipop_content_fixed").style.display=""}function h(){a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none"}g(a,"DOMContentLoaded",function(){var b=a.createElement("div"),e=a.createElement("div"),c=a.createElement("div"),d=a.createElement("div");e.id="uglipop_content_fixed";e.setAttribute("style","position:fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);opacity:1;z-index:10000000;");c.id="uglipop_popbox";d.id="uglipop_overlay_wrapper";d.setAttribute("style","position:absolute;top:0;bottom:0;left:0;right:0;");b.id="uglipop_overlay";b.setAttribute("style","position:fixed;top:0;bottom:0;left:0;right:0;opacity:0.3;width:100%;height:100%;background-color:black;");d.appendChild(b);e.appendChild(c);a.body.appendChild(d);a.body.appendChild(e);a.getElementById("uglipop_overlay_wrapper").style.display="none";a.getElementById("uglipop_overlay").style.display="none";a.getElementById("uglipop_content_fixed").style.display="none";d.addEventListener("click",h);g(f,"keydown",function(a){27==a.keyCode&&h()});f.uglipop=k})})(window,document);
+			var ezRBA = (function() {
+			  function init() {
+				var reportAdsBtns = document.querySelectorAll('#ez-report-ad-button');
+				for (let i = 0; i < reportAdsBtns.length; i++) {
+				  reportAdsBtns[i].addEventListener('click', function(e) {
+					var url = '<iframe src="https://ezoic.com/pub/reportads.html' + e.target.getAttribute('name') + '" width="400" height="500" style="border-radius: 10px; box-shadow: 2px 2px 30px 6px rgba(0,0,0,0.75); border: 1px solid black;"></iframe>'
+					uglipop({
+					  class: 'none',
+					  source: 'html',
+					  content: url,
+					});
+				  });
+				}
+				function bindEvent(element, eventName, eventHandler) {
+					if (element.addEventListener) {
+						element.addEventListener(eventName, eventHandler, false);
+					} else if (element.attachEvent) {
+						element.attachEvent('on' + eventName, eventHandler);
+					}
+				}
+				bindEvent(window, 'message', function(e) {
+					if (e.data === 'close-report-ad-modal') {
+						document.getElementById('uglipop_overlay_wrapper').style.display = 'none';	
+						document.getElementById('uglipop_overlay').style.display = 'none';	
+						document.getElementById('uglipop_content_fixed').style.display = 'none';	
+					}
+				})
+			  }
+
+			  return {
+				init: init
+			  };
+			})();
+			ezRBA.init();
+		</script>
+
+<div id='dmo1' style='display:none'>
+	<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6396844742497208";
+		/* dmo */
+		google_ad_slot = "dmo";
+		google_ad_width = 88;
+		google_ad_height = 31;
+		//-->
+	</script>
+	<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.r_statistics_co,DomainId.74860"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.r_statistics_co,DomainId.74860"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag--></body></html><!--[selectron:done]-->

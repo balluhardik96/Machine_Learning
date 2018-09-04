@@ -1,0 +1,104 @@
+---
+title: "Linear Regression"
+author: "Hardik Ballal"
+date: "2 September 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(e1071)
+data("cars")
+View(cars)
+```
+
+
+To check the outliers using the scatterplot
+```{r}
+scatter.smooth(x=cars$speed,cars$dist,main="Dist ~ Speed") 
+```
+
+```{r}
+boxplot(cars$speed)
+boxplot(cars$dist)
+```
+
+
+
+
+
+Density Plot
+```{r}
+par(mfrow=c(1, 2))  # divide graph area in 2 columns
+plot(density(cars$speed), main="Density Plot: Speed", ylab="Frequency", sub=paste("Skewness:", round(e1071::skewness(cars$speed), 2)))  # density plot for 'speed'
+polygon(density(cars$speed), col="red")
+plot(density(cars$dist), main="Density Plot: Distance", ylab="Frequency", sub=paste("Skewness:", round(e1071::skewness(cars$dist), 2)))  # density plot for 'dist'
+polygon(density(cars$dist), col="red")
+```
+
+
+
+Correlation between 2 variables
+```{r}
+cor(cars$speed,cars$dist)
+```
+
+
+
+
+
+Linear Regression Modelling
+```{r}
+lin=lm(dist~speed,data = cars)
+lin
+summary(lin)
+```
+
+
+# capture model summary as an object
+```{r}
+modelSummary <- summary(lin)
+modelSummary
+
+```
+# model coefficients
+```{r}
+modelCoeffs <- modelSummary$coefficients
+modelCoeffs
+```
+# get beta estimate for speed
+```{r}
+beta.estimate <- modelCoeffs["speed", "Estimate"]
+beta.estimate 
+```
+
+```{r}
+ modelCoeffs["speed", "Std. Error"]  # get std.error for speed
+```
+
+```{r}
+ beta.estimate/std.error  # calc t statistic or value
+```
+
+```{r}
+ 2*pt(-abs(t_value), df=nrow(cars)-ncol(cars))  # calc p Value
+```
+
+```{r}
+ 2*pt(-abs(t_value), df=nrow(cars)-ncol(cars))  # calc p Value
+```
+
+```{r}
+ lin$fstatistic[1]  # fstatistic
+```
+
+```{r}
+ summary(lin)$fstatistic  # parameters for model p-value calc
+```
+
+```{r}
+ model_p = pf(f[1], f[2], f[3], lower=FALSE)
+model_p
+```
+
